@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 600vh;
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.max-width {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(65, 1fr);
+    height: 100%;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.nav {
+    grid-column: span 8;
+    width: 100%;
+    background-color: rgb(207, 207, 207);
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .logo h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #008dd2;
+    color: white;
+    border-radius: 1rem;
+    padding: 5px;
+    font-size: .8rem;
+    text-align: center;
+}
+.nav .logo h6 {
+    font-size: .5rem;
+    text-align: center;
+}
+.nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .nav-links .links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    margin-right: 2.3rem;
+}
+.nav .nav-links button {
+    background-color: #65a5ec;
+    padding: 1rem;
+    font-weight: 200;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    border: none;
+}
+
+.hero {
+    grid-column: span 8;
+    grid-row: span 8;
+    width: 100%;
+}
+.hero .hero-img {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.hero .hero-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.carousel {
+    grid-column: span 8;
+    grid-row: span 6;
+    margin-top: 3rem;
+}
+.carousel .carousel-top {
+    margin-left: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+.carousel .carousel-top span {
+    color: #65a5ec;
+}
+.carousel .carousel-top button {
+    padding: 10px 3rem;
+    background-color: white;
+    font-weight: 600;
+    color: #5790d1;
+    border: .5px solid #65a5ec;
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+.carousel .carousel-img-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+.carousel .carousel-img-wrapper .carousel-img {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}   
+.carousel .carousel-img-wrapper .carousel-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.courses {
+    grid-column: span 8;
+    grid-row: span 8;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.courses h2 {
+    text-align: center;
+}
+.courses .courses-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.courses .courses-wrapper .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.courses button {
+    border-radius: 2rem;
+    padding: 5px 1.5rem;
+}
+
+.sign-in {
+    grid-column: span 8;
+    grid-row: span 7;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.sign-in .form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.India-map {
+    grid-column: span 8;
+    grid-row: span 6;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.India-map-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.why-gurukripa {
+    grid-column: span 8;
+    grid-row: span 8;
+    width: 100%;
+}
+
+.masterminds {
+    grid-column: span 10;
+    grid-row: span 3;
+    width: 100%;
+}
+.masterminds .masterminds-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.masterminds .masterminds-cards .img-card-pic {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.masterminds .masterminds-cards .img-card-pic img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.elearning-cards {
+    grid-column: span 8;
+    grid-row: span 4;
+    width: 100%;
+
+    position: relative;
+}
+.elearning-cards h1 {
+    position: absolute;
+}
+.elearning-cards .elearning-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    height: 100%;
+}
+
+.program-cards {
+    grid-column: span 8;
+    grid-row: span 3;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+.program-cards .program-card-wrapper {
+    grid-row: span 3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    height: 100%;
+}
+
+.testimonials {
+    grid-column: span 8;
+    grid-row: span 3;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.explore {
+    grid-column: span 8;
+    grid-row: span 8;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.explore .explore-btm {
+    grid-row: span 3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+    height: 100%;
+}
+.explore .explore-btm .explore-img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.explore .explore-btm .explore-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    grid-column: span 8;
+    grid-row: span 5;
+}
+
