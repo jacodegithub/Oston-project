@@ -11,7 +11,7 @@ body {
 
 .max-width {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1500px;
 }
 
 .main-container {
@@ -338,11 +338,77 @@ body {
     width: 100%;
     height: auto;
 }
+.minars {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee9fd;
+    height: 80%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.minar-card {
+    height: 100%;
+}
+.minar-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.minar-card-header h3 {
+    color: rgba(0, 0, 0, 0.7);
+}
+.minar-card-header span {
+    color: #65a5ec;
+}
+.minar-cards-wrapper {
+    margin-top: 6rem;
 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    height: inherit;
+}
+.minar-cards-wrapper .minar-card-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.minar-cards-wrapper .minar-card-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.minar-cards-wrapper .minar-card-img.minar-active {
+    transform: scale(1.05);
+    box-shadow: 1px 4px 10px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* gurukripa section  */
 .why-gurukripa {
     grid-column: span 8;
     grid-row: span 8;
     width: 100%;
+    height: 100%;
+}
+.why-gurukripa h1 {
+    font-size: 8rem;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.638);
+}
+.why-gurukripa .gurukripa-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    height: 100%;
 }
 
 .masterminds {
@@ -352,21 +418,116 @@ body {
 }
 .masterminds .masterminds-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
-.masterminds .masterminds-cards .img-card-pic {
+.masterminds .masterminds-cards .mastermind-card-pic {
     width: 100%;
-    height: 200px;
+    height: 350px;
     position: relative;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
-.masterminds .masterminds-cards .img-card-pic img {
+.masterminds .masterminds-cards .mastermind-card-pic img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.masterminds .masterminds-cards .mastermind-single_card {
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: grey;
+
+    position: relative;
+}
+.mastermind-single_card .m-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.mastermind-single_card .m-card-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mastermind-single_card .m-card-btm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.mastermind-single_card .m-card-btm .experience-stkr{
+    width: 200px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.mastermind-single_card .m-card-btm .experience-stkr img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.m-card-stkr {
+    position: absolute;
+    z-index: 10;
+}
+.m-card-stkr.one {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    right: 1rem;
+}
+.m-card-stkr.two {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    left: 5rem;
+}
+.m-card-stkr.three {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.m-card-stkr.one img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.m-card-stkr.two img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.m-card-stkr.three img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
 }
 
 .elearning-cards {
