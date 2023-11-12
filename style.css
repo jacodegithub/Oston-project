@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 1000vh;
+    height: 1050vh;
     background-color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -28,7 +28,8 @@ body {
 .nav {
     /* grid-column: span 8; */
     width: 100%;
-    background-color: rgb(207, 207, 207);
+    /* background-color: rgb(207, 207, 207); */
+    box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     padding: 1rem;
 
@@ -75,6 +76,7 @@ body {
     grid-row: span 50; */
     width: 100%;
     height: 7%;
+    position: relative;
 }
 .hero .hero-img {
     width: 100%;
@@ -82,6 +84,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
+    border: 1px solid #65a5ec;
 }
 .hero .hero-img img {
     position: absolute;
@@ -90,6 +93,17 @@ body {
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
+}
+.hero .hero-bar {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #65a5ec;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .carousel {
@@ -120,11 +134,11 @@ body {
 .carousel .carousel-img-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 .carousel .carousel-img-wrapper .carousel-img {
     width: 100%;
-    height: 230px;
+    height: 300px;
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
@@ -163,7 +177,6 @@ body {
 
 /* course card  */
 .courses .courses-wrapper .card {
-    background-color: red;
     border-radius: 1.5rem;
     display: flex;
     align-items: center;
@@ -202,14 +215,44 @@ body {
     width: 100%;
     height: auto;
 }
+.card.one {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,213,253,1) 100%); 
+}
 .card.two {
     transform: scale(1.02);
     box-shadow: 2px 6px 10px 2px rgba(0, 0, 0, 0.6);
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(178,223,246,1) 100%); 
+}
+.card.three {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(151,255,244,1) 100%); 
+}
+.card.four {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(224,213,253,1) 100%); 
 }
 .card.five {
     transform: scale(1.02);
     box-shadow: 2px 6px 10px 2px rgba(0, 0, 0, 0.6);
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(178,223,246,1) 100%); 
 }
+.card.six {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(151,255,244,1) 100%); 
+}
+.card.one h3, .card.four h3 {
+    color: #a952f3;
+}
+.card.two h3, .card.five h3 {
+    color: #039bea;
+}
+.card.three h3, .card.six h3 {
+    color: #008b7e;
+}
+
 .courses .courses-wrapper .card .card-left button {
     border-radius: 2rem;
     padding: 10px 1.8rem;
@@ -226,7 +269,6 @@ body {
     color: rgba(0, 0, 0, 0.7);
     border: .5px solid #65a5ec;
     border-radius: 2rem;
-    margin-left: 1rem;
 }
 
 /* sign-in form  */
@@ -309,8 +351,6 @@ body {
 
 /* Inida map section  */
 .India-map {
-    grid-column: span 8;
-    grid-row: span 30;
     width: 100%;
 
     display: flex;
@@ -395,10 +435,7 @@ body {
 
 /* gurukripa section  */
 .why-gurukripa {
-    grid-column: span 8;
-    grid-row: span 8;
-    width: 100%;
-    /* height: 100%; */
+    height: 16%;
     margin-top: 5rem;
 }
 .why-gurukripa h1 {
@@ -410,11 +447,117 @@ body {
 .why-gurukripa .gurukripa-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
     gap: 20px;
-    height: 100%;
+    height: 70%;
+    width: 50rem;
+    margin: 5rem auto;
 }
 
+/* center blue line  */
+.gurukripa-content .gurukripa-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gurukripa-content .gurukripa-line .line {
+    height: 55rem;
+    width: .5rem;
+    background: rgb(0,141,210);
+    background: linear-gradient(180deg, rgba(0,141,210,1) 0%, rgba(149,190,234,1) 100%); 
+
+    position: relative;;
+}
+
+/* line nodes  */
+.gurukripa-content .node-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 125%;
+}
+.gurukripa-content .node {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(0,141,210);
+}
+.node.three {
+    background-color: #95beea;
+}
+.node.four {
+    background-color: #95beea;
+}
+
+.gurukripa-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.gurukripa-right {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.content .block {
+    display: flex;
+    flex-direction: column;
+}
+.content h1 {
+    font-size: 10rem;
+    color: white;
+    -webkit-text-stroke: 1px #65a4ecca;
+}
+.content h3 {
+    color: #65a5ec;
+}
+.content p {
+    font-size: x-small;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 1rem;
+}
+.content-img {
+    height: 17rem;
+    width: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+.content-img.one {
+    height: 15rem;
+    width: 15rem;
+}
+.content-img.two {
+    height: 10rem;
+    width: 20rem;
+}
+.content-img.three {
+    height: 15rem;
+    width: 20rem;
+}
+.content-img.four {
+    height: 17rem;
+    width: 15rem;
+}
+.content-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+/* mastermind section  */
 .masterminds {
     grid-column: span 10;
     grid-row: span 25;
@@ -434,8 +577,8 @@ body {
     gap: 30px;
 }
 .masterminds .masterminds-cards .mastermind-card-pic {
-    width: 100%;
-    height: 350px;
+    width: 95%;
+    height: 300px;
     position: relative;
     overflow: hidden;
     border-radius: 2rem;
@@ -456,7 +599,6 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid black;
-    /* background-color: grey; */
 
     position: relative;
 }
@@ -505,7 +647,7 @@ body {
 .m-card-stkr.two {
     width: 2rem;
     height: 2rem;
-    top: 5rem;
+    top: 6rem;
     right: 1rem;
 }
 .m-card-stkr.three {
@@ -514,6 +656,25 @@ body {
     top: 1rem;
     left: 1rem;
 }
+.m-top-left h2 {
+    color: #65a5ec;
+    font-size: xx-large;
+}
+.m-top-left p {
+    color: orange;
+    font-weight: bold;
+}
+.m-card-top button {
+    padding: 10px 2rem;
+    background-color: #65a5ec;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 2rem;
+}
+.m-card-mid h4 {
+    color: #65a5ec;
+}
+
 
 /* e-learning cards  */
 .elearning-cards {
@@ -714,6 +875,24 @@ body {
     flex-direction: column;
     margin-bottom: 6.5rem;
     padding-right: 7rem;
+    position: relative;
+}
+.testimonial-card-right .quotation1 {
+    position: absolute;
+    top: 4rem;
+    left: -3rem;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+.testimonial-card-right .quotation2 {
+    position: absolute;
+    bottom: 4rem;
+    right: 6rem;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
 }
 .testimonial-card-right p {
     margin-bottom: 4rem;
@@ -794,7 +973,7 @@ body {
 /* footer section  */
 footer {
     background-color: #fff3e3;
-    height: 7%;
+    height: 8%;
     position: relative;
 }
 /* .footer-wrapper {
